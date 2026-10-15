@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kinglake Research</title>
+  <meta name="description" content="Kinglake Research LLC: research consulting in machine learning, formal verification, and quantitative finance, and AI workflows and software for clients.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23173b45'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' text-anchor='middle' fill='%23f4efe6'%3EK%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f4ee;
+      --panel: #ffffff;
+      --ink: #172126;
+      --ink2: #46555c;
+      --ink3: #6f7d83;
+      --accent: #1d5f6e;
+      --rule: #e3ddd2;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #12181b;
+        --panel: #192125;
+        --ink: #eef0ee;
+        --ink2: #b9c3c6;
+        --ink3: #8b989c;
+        --accent: #7cc0cc;
+        --rule: #2a3438;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font: 400 17px/1.65 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
+    a:hover { border-bottom-color: var(--accent); }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+    header { padding: 28px 0; border-bottom: 1px solid var(--rule); }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { font: 600 19px/1 "Source Serif 4", Georgia, serif; letter-spacing: 0.01em; color: var(--ink); border: 0; }
+    nav { display: flex; gap: 22px; font-size: 14px; }
+    nav a { color: var(--ink3); border: 0; }
+    nav a:hover { color: var(--accent); }
+    .hero { padding: 72px 0 56px; }
+    h1 { font: 600 clamp(32px, 6vw, 46px)/1.15 "Source Serif 4", Georgia, serif; letter-spacing: -0.01em; max-width: 18ch; }
+    .lede { margin-top: 20px; font-size: 19px; color: var(--ink2); max-width: 60ch; }
+    .cta { display: inline-block; margin-top: 28px; padding: 11px 20px; border-radius: 8px; background: var(--accent); color: var(--bg); font-weight: 500; font-size: 15px; border: 0; }
+    .cta:hover { opacity: 0.9; }
+    section { padding: 56px 0; border-top: 1px solid var(--rule); }
+    .label { font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+    h2 { font: 600 28px/1.25 "Source Serif 4", Georgia, serif; margin-bottom: 28px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .card { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 24px; }
+    .card h3 { font: 600 19px/1.3 "Source Serif 4", Georgia, serif; margin-bottom: 10px; }
+    .card p { color: var(--ink2); font-size: 15.5px; }
+    .card ul { margin-top: 12px; padding-left: 18px; color: var(--ink2); font-size: 15px; }
+    .card li { margin: 4px 0; }
+    .work { display: grid; gap: 26px; }
+    .work h3 { font: 600 20px/1.3 "Source Serif 4", Georgia, serif; margin-bottom: 6px; }
+    .work p { color: var(--ink2); max-width: 68ch; }
+    .work .links { margin-top: 8px; font-size: 14.5px; display: flex; flex-wrap: wrap; gap: 18px; }
+    .about p { color: var(--ink2); max-width: 68ch; }
+    .about p + p { margin-top: 14px; }
+    .contact p { color: var(--ink2); max-width: 60ch; }
+    .contact .email { display: inline-block; margin-top: 14px; font-size: 20px; font-weight: 500; }
+    footer { padding: 32px 0 48px; border-top: 1px solid var(--rule); font-size: 13.5px; color: var(--ink3); }
+    @media (max-width: 680px) {
+      body { font-size: 16px; }
+      .wrap { padding: 0 16px; }
+      nav { display: none; }
+      .hero { padding: 48px 0 40px; }
+      .grid { grid-template-columns: 1fr; }
+      section { padding: 44px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="/">Kinglake Research</a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#work">Selected work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <h1>Rigorous research, applied to hard problems.</h1>
+      <p class="lede">
+        Kinglake Research LLC is a research consultancy. We take on technically demanding work in machine
+        learning, formal verification, and quantitative finance, and we build AI workflows and software for
+        clients.
+      </p>
+      <a class="cta" href="#contact">Discuss a project</a>
+    </div>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="label">Services</div>
+        <h2>What we do</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>AI and machine learning research</h3>
+            <p>Research-grade analysis of how models learn and what they compute.</p>
+            <ul>
+              <li>Mechanistic interpretability and circuit analysis</li>
+              <li>Training dynamics and diagnostics</li>
+              <li>Experiment design, evaluation, and reproducible pipelines</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Formal verification</h3>
+            <p>Machine-checked mathematics with evidence that it says what it should.</p>
+            <ul>
+              <li>Formalization in Lean&nbsp;4 and Mathlib</li>
+              <li>Faithfulness audits: does the formal statement match the source?</li>
+              <li>Human-readable verification reports for non-specialists</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Quantitative research</h3>
+            <p>Systematic trading research with machine learning at its core.</p>
+            <ul>
+              <li>Neural-network signals for market-neutral long/short strategies</li>
+              <li>Portfolio construction, backtesting, and robustness testing</li>
+              <li>Risk and regime analysis</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>AI workflows and software</h3>
+            <p>We also design and build working systems for clients.</p>
+            <ul>
+              <li>AI-assisted workflows with built-in verification and review</li>
+              <li>Data pipelines and internal tools</li>
+              <li>Web and mobile applications</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="label">Selected work</div>
+        <h2>Recent research</h2>
+        <div class="work">
+          <div>
+            <h3>Spectral probe-circuits for transformer interpretability</h3>
+            <p>
+              An unsupervised, training-time signal that identifies causally relevant attention circuits
+              without labels or ablation sweeps, validated across dense and mixture-of-experts language models
+              up to OLMoE&nbsp;1B-7B. Part of a series of papers on the geometry of training dynamics,
+              including early-warning signals for grokking.
+            </p>
+            <div class="links">
+              <a href="https://skydancerosel.github.io/">Research and publications</a>
+              <a href="https://github.com/skydancerosel/spectral-probe-circuits">Code</a>
+            </div>
+          </div>
+          <div>
+            <h3>Faithful formalization of two graduate mathematics texts</h3>
+            <p>
+              Complete Lean&nbsp;4 formalizations of John Milnor's <em>Topology from the Differentiable
+              Viewpoint</em> and <em>Morse Theory</em>: over 160,000 lines and more than 1,600 machine-checked
+              theorems with no unproved steps. Each book comes with a plain-language verified edition and a
+              statement-by-statement comparison with the original; <em>Morse Theory</em> also has a blind
+              round-trip audit that checks the formal statements against independently formalized versions of
+              the book's own.
+            </p>
+          </div>
+          <div>
+            <h3>Neural-network systematic trading</h3>
+            <p>
+              A market-neutral long/short strategy driven by neural-network signals: model research,
+              portfolio construction that holds net market exposure near zero, and backtesting across market
+              regimes.
+            </p>
+            <div class="links">
+              <a href="https://www.linkedin.com/in/yongzhong-xu">More on LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="wrap">
+        <div class="label">About</div>
+        <h2>Founder</h2>
+        <p>
+          Kinglake Research was founded by Yongzhong Xu, a mathematician who works across pure mathematics,
+          machine learning, and quantitative finance.
+        </p>
+        <p>
+          He received his Ph.D. in Mathematics from Rutgers University, was a Courant Instructor at the Courant
+          Institute of Mathematical Sciences (NYU) and a member of the Institute for Advanced Study, and later
+          served as a Distinguished Research Fellow and Associate Professor at Shanghai Jiao Tong University. He
+          is co-author, with Abbas Bahri, of the monograph <em>Recent Progress in Conformal Geometry</em>
+          (Imperial College Press).
+        </p>
+        <p>
+          <a href="https://skydancerosel.github.io/">Research site</a> &nbsp;·&nbsp;
+          <a href="https://github.com/skydancerosel">GitHub</a> &nbsp;·&nbsp;
+          <a href="https://www.linkedin.com/in/yongzhong-xu">LinkedIn</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <div class="label">Contact</div>
+        <h2>Start a conversation</h2>
+        <p>
+          Tell us about the problem, the timeline, and what a good outcome looks like. We reply to every
+          serious inquiry.
+        </p>
+        <a class="email" href="mailto:contact@kinglakeresearch.com">contact@kinglakeresearch.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year">2026</span> Kinglake Research LLC</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
