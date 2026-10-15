@@ -65,7 +65,12 @@
     .work p { color: var(--ink2); max-width: 68ch; }
     .work .links { margin-top: 8px; font-size: 14.5px; display: flex; flex-wrap: wrap; gap: 18px; }
     .about p { color: var(--ink2); max-width: 68ch; }
-    .about p + p { margin-top: 14px; }
+    .people { margin-top: 26px; display: grid; gap: 18px; }
+    .person { padding-top: 18px; border-top: 1px solid var(--rule); }
+    .person .name { font-weight: 600; font-size: 16.5px; }
+    .person .name span { font-weight: 400; color: var(--ink3); }
+    .person p { margin-top: 4px; font-size: 15.5px; }
+    .person .links { margin-top: 8px; font-size: 14.5px; display: flex; flex-wrap: wrap; gap: 18px; }
     .contact p { color: var(--ink2); max-width: 60ch; }
     .contact .email { display: inline-block; margin-top: 14px; font-size: 20px; font-weight: 500; }
     footer { padding: 32px 0 48px; border-top: 1px solid var(--rule); font-size: 13.5px; color: var(--ink3); }
@@ -195,23 +200,26 @@
     <section id="about" class="about">
       <div class="wrap">
         <div class="label">About</div>
-        <h2>Founder</h2>
+        <h2>A small research firm</h2>
         <p>
-          Kinglake Research was founded by Yongzhong Xu, a mathematician who works across pure mathematics,
-          machine learning, and quantitative finance.
+          Kinglake Research is a small, research-led firm. We work directly with each client, keep teams
+          small, and hold every result to the standard of a careful paper: stated assumptions, checked
+          claims, and work you can reproduce.
         </p>
-        <p>
-          He received his Ph.D. in Mathematics from Rutgers University, was a Courant Instructor at the Courant
-          Institute of Mathematical Sciences (NYU) and a member of the Institute for Advanced Study, and later
-          served as a Distinguished Research Fellow and Associate Professor at Shanghai Jiao Tong University. He
-          is co-author, with Abbas Bahri, of the monograph <em>Recent Progress in Conformal Geometry</em>
-          (Imperial College Press).
-        </p>
-        <p>
-          <a href="https://skydancerosel.github.io/">Research site</a> &nbsp;·&nbsp;
-          <a href="https://github.com/skydancerosel">GitHub</a> &nbsp;·&nbsp;
-          <a href="https://www.linkedin.com/in/yongzhong-xu">LinkedIn</a>
-        </p>
+        <div class="people">
+          <div class="person">
+            <div class="name">Yongzhong Xu <span>· Co-founder</span></div>
+            <p>
+              Mathematician (Ph.D., Rutgers; formerly Courant Institute and Institute for Advanced Study),
+              working on machine learning, formal verification, and quantitative finance.
+            </p>
+            <div class="links">
+              <a href="https://skydancerosel.github.io/">Research</a>
+              <a href="https://github.com/skydancerosel">GitHub</a>
+              <a href="https://www.linkedin.com/in/yongzhong-xu">LinkedIn</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
